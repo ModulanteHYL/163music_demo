@@ -1,0 +1,23 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+input{font: inherit;}
+body{font-size: 12pt;line-height: 1.5}
+a{text-decoration: none;}
+li{list-style: none;}
+.active{background: rgb(185, 184, 184);}
+div.pages{display: flex;height: 100vh;}
+div.pages aside{width: 250px;flex-direction: column;display: flex;}
+div.pages aside div.headline{text-align: center;border-bottom: 3px solid black;padding: 15px 0;}
+div.pages aside ul.songList{flex-grow: 1;}
+div.pages aside ul.songList>li{padding: 10px 0;border-bottom: 1px solid #ddd;cursor: pointer;word-wrap: break-word;}
+
+div.pages main{flex-grow: 1;background: rgb(185, 184, 184)}
+div.pages main div.title{font-size: 18pt;font-weight: bold;padding: 20px;}
+div.pages main div.row{padding: 10px 40px;display: flex;align-items: center;}
+div.pages main div.row>label{}
+div.pages main div.row>input[type=text]{width: 50%;border: 1px solid #ddd;border-radius: 3px;height: 30px;}
+div.pages main div.row>input[type=submit]{padding: 0 5px;border: 1px solid #ddd; border-radius: 5px;background: white;}
+
+div.upload_wrapper{display: inline-block;width: 100%;}
+div.upload_wrapper .upload_zone{border: 2px dashed #ddd;padding: 40px;border-radius: 10px;}
+div.upload_wrapper .upload_zone>a{color: black}
+div.upload_wrapper .upload_zone>a>span{display: inline-block; max-width: 150px; word-wrap: break-word;}

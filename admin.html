@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理员</title>
+    <link rel="stylesheet" href="./src/css/admin-style.css">
+</head>
+
+<body>
+    <div class="pages">
+        <aside>
+            <div class="headline active">
+                <span>新建歌曲</span>
+            </div>
+            <ul class="songList">
+                
+            </ul>
+            <div class="upload_wrapper">
+                <div id="container" class="upload_zone">
+                    <a href="#" id="pickfiles">
+                        <span>点击选择上传文件或拖曳文件到此上传</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <main></main>
+    </div>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/leancloud-storage/dist/av-min.js"></script>
+    <script src="./src/js/initAV.js"></script>
+    <script src="./qiniu-js-sdk/dist/qiniu.min.js"></script>
+    <script src="https://cdn.bootcss.com/plupload/3.1.2/plupload.full.min.js"></script>
+    <script src="./src/js/eventHub.js"></script>
+    
+    <script src="./src/js/headline.js"></script>
+    <script src="./src/js/songList.js"></script>
+    <script src="./src/js/saveMusic.js"></script>
+    <script src="./src/js/uploadMusic.js"></script>
+</body>
+
+</html>

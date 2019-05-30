@@ -1,0 +1,89 @@
+*{margin:0;padding: 0;box-sizing: border-box;font-size: 15px;}
+*::after,*::before{box-sizing: border-box;}
+body{font: 14px/1.5 Helvetica,sans-serif;}
+a{text-decoration: none;color: black;}
+li{list-style: none;}
+h2{font-weight: normal;}
+.icon {width: 1em; height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;}
+div.theme{background-color:#D43C33;height: 8vh;width: 100%;position: fixed;z-index: 10;}
+div.theme .topbar_wrapper{position: relative;display: flex;align-items: center;margin: 0 10px;height: 100%;}
+div.theme .topbar_wrapper>h1{position: absolute;left: 0;}
+div.theme .topbar_wrapper>h1>svg.topsvg{height: 25px;width: 142px;vertical-align: top;}
+div.theme .topbar_wrapper>div.downloadApp{position: absolute;right:0;}
+div.theme .topbar_wrapper>div.downloadApp span{display: inline-block;position: relative;color: white;padding: 5px 11px;cursor: pointer;}
+div.theme .topbar_wrapper>div.downloadApp span::before{content: '';position: absolute;left: 0;top: 0;width:250%;height: 250%;border: 1.5px solid white;border-radius: 50px;transform: scale(0.4);transform-origin: 0 0;}
+
+div.mainContent{padding-top:8vh;}
+div.mainContent>div.zone{padding-top:5vh;}
+div.mainContent>nav.menu_nav{box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);height: 5vh;width: 100%;position: fixed;z-index: 10;left: 0;background: white;}
+div.mainContent>nav.menu_nav ul{display: flex;height: 100%;}
+div.mainContent>nav.menu_nav ul li.row{display: flex;justify-content: center;align-items: center;width: 33.333%;}
+div.mainContent>nav.menu_nav ul li.row.active>div::after{content: '';display: block;border-bottom: 2px solid #D43C33;position: absolute;left: 0;bottom: 0;width: 100%;}
+div.mainContent>nav.menu_nav ul li.row.active>div{color: #D43C33;}
+div.mainContent>nav.menu_nav ul div{position: relative;padding:0 5px;height: 100%;display: flex;align-items: center;}
+
+section.recommend_song{padding-top: 20px;height: 100%;display: none;}
+section.recommend_song h2{font-size: 17px;line-height: 20px;border-left: 2px solid red;margin-bottom: 14px;height: 20px;padding-left: 9px;}
+section.recommend_song>div.album{height: 50%;}
+section.recommend_song>div.album .row{display: flex;padding-bottom: 20px;}
+section.recommend_song>div.album .row>span{width: 33.2%;font-size: 0px;cursor: pointer;position: relative;}
+section.recommend_song>div.album .row>span::after{content: " ";display: block;position: absolute;width: 100%;height: 20px;top: 0;left: 0;background-image: linear-gradient(180deg,rgba(0,0,0,.2),transparent);}
+section.recommend_song>div.album .row>span>img{width: 100%;height: auto;}
+section.recommend_song>div.album .row>span:nth-child(1){margin-right: 1vw;}
+section.recommend_song>div.album .row>span:nth-child(3){margin-left: 1vw;}
+section.recommend_song>div.album .row>span>p{font-size: 13px;padding: 6px 2px 0 6px;line-height: 1.2}
+.wrapper{cursor: pointer;display: flex;margin-left: 10px;border-bottom: 1px solid #ddd;height: 100%;}
+.wrapper>div.song_info{flex: 9;max-width: 90%;}
+.wrapper>div.song_info>.song_name,
+.wrapper>div.song_info>.singer_info>.singer{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;word-wrap: break-word;font-size: 17px;}
+.wrapper>div.song_info>.singer_info{display: flex;align-items: center;}
+.wrapper>div.song_info>.singer_info>.singer{color: rgb(167, 165, 165);font-size: 12px;padding-left: 5px;vertical-align: top;}
+.wrapper>.play_button{flex:1;display: flex;align-items: center;justify-content: center;}
+.wrapper>.play_button>a{}
+.wrapper>.play_button svg{width: 22px;height: 22px;color: rgb(167, 165, 165);}
+section.recommend_song>footer{padding-top: 20%;background: url(//s3.music.126.net/m/s/img/recommand_bg_2x.png?d045faf…) no-repeat;background-size: cover;background-position: center;}
+section.recommend_song>footer .bottom_logo{margin: auto;width: 230px;height: 44px;}
+section.recommend_song>footer .openApp{font-size: 16px;line-height: 38px;border: 1px solid #d33a31;color: #d33a31;border-radius: 25px;margin: 15px 37px 5px;text-align: center;}
+section.recommend_song>footer .copyright{font-size: 12px;line-height: 16px;color: #888;transform: scale(.75);text-align: center;padding-bottom:25px;}
+
+section.hotsong{display: none;}
+section.hotsong>.topbill{background: url(//s3.music.126.net/m/s/img/hot_music_bg_2x.jpg?f01a252…) no-repeat;background-size: contain; overflow: hidden;padding-top: 38.9%;position: relative;}
+section.hotsong>.topbill::after,
+section.hotsong>.topbill .wrapper{position: absolute;top: 0;right: 0;bottom: 0;left: 0;}
+section.hotsong>.topbill::after{content: ' ';z-index: 1;background-color: rgba(0, 0, 0, 0.2);}
+section.hotsong>.topbill .wrapper{display: flex;flex-direction: column;justify-content: center;padding-left: 20px;z-index: 2;box-sizing: border-box;}
+section.hotsong>.topbill .wrapper .hoticon{width: 142px;height: 67px;background: url(//s3.music.126.net/m/s/img/index_icon_2x.png?5207a28…) no-repeat;background-size: 166px 97px;background-position: -24px -30px;}
+section.hotsong>.topbill .wrapper .update_time{margin-top:10px;color: rgb(240, 226, 226);font-size: 12px;transform: scale(0.9);transform-origin: 0 0;}
+section.hotsong>.hotsong_list li{padding-top: 6px;}
+section.hotsong>.hotsong_list .order{font-size: 17px;display: flex;align-items: center;width: 28px;}
+section.hotsong>.seemore{height: 55px;line-height: 55px;text-align: center;color: #999;cursor: pointer;}
+
+section.search{display: none;}
+section.search>.search_wrap{
+    width: 100%;
+}
+section.search>.search_wrap form{
+    padding: 2vh 5vw;
+    border-bottom: 1px solid #ebecec
+}
+section.search>.search_wrap form>label{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…MuNTgyLDgsOCw4YzQuNDE4LDAsOC0zLjU4Miw4LThTMTQuNDE4LDIsMTAsMnoiLz48L3N2Zz4=);
+}
+section.search>.search_wrap form>.con_wrap{
+    width: 100%;
+}
+section.search>.search_wrap form input{
+    font-size: 15px;
+    border: none;
+    outline: none;
+    line-height: 18px;
+    background: #ebecec;
+    height: 30px;
+    width: 100%;
+    padding: 0 10%;
+    border-radius: 25px;
+}
+
+section.recommend_song.active,
+section.hotsong.active,
+section.search.active{display: block;}
