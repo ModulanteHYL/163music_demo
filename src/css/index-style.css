@@ -59,30 +59,11 @@ section.hotsong>.hotsong_list .order{font-size: 17px;display: flex;align-items: 
 section.hotsong>.seemore{height: 55px;line-height: 55px;text-align: center;color: #999;cursor: pointer;}
 
 section.search{display: none;}
-section.search>.search_wrap{
-    width: 100%;
-}
-section.search>.search_wrap form{
-    padding: 2vh 5vw;
-    border-bottom: 1px solid #ebecec
-}
-section.search>.search_wrap form>label{
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…MuNTgyLDgsOCw4YzQuNDE4LDAsOC0zLjU4Miw4LThTMTQuNDE4LDIsMTAsMnoiLz48L3N2Zz4=);
-}
-section.search>.search_wrap form>.con_wrap{
-    width: 100%;
-}
-section.search>.search_wrap form input{
-    font-size: 15px;
-    border: none;
-    outline: none;
-    line-height: 18px;
-    background: #ebecec;
-    height: 30px;
-    width: 100%;
-    padding: 0 10%;
-    border-radius: 25px;
-}
+section.search>.search_wrap{width: 100%;}
+section.search>.search_wrap form{padding: 2vh 5vw;border-bottom: 1px solid #ebecec}
+section.search>.search_wrap form>label{background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zd…MuNTgyLDgsOCw4YzQuNDE4LDAsOC0zLjU4Miw4LThTMTQuNDE4LDIsMTAsMnoiLz48L3N2Zz4=);}
+section.search>.search_wrap form>.con_wrap{width: 100%;}
+section.search>.search_wrap form input{font-size: 15px;border: none;outline: none;line-height: 18px;background: #ebecec;height: 30px;width: 100%;padding: 0 10%;border-radius: 25px;}
 
 section.recommend_song.active,
 section.hotsong.active,

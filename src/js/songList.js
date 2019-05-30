@@ -5,7 +5,7 @@
             this.$el = $(this.el);
         },
         template: ``,
-        render(songs) {
+        render(songs) {//歌曲插入列表
             this.$el.html(this.template);
             for (let i = 0; i < songs.length; i++) {
                 this.$el.append(`<li obj_id=${songs[i].id}>${songs[i].songName}</li>`);
@@ -41,7 +41,15 @@
                 }
                 this.view.render(this.model.data.songs);
             })
-
+            window.eventHub.on('delete', (id) => {
+                this.view.$el.find(`li[obj_id=${id}]`).remove();
+                for (let key in this.model.data.songs) {//删除model中对应的数据
+                    if (this.model.data.songs[key].id === id) {
+                        this.model.data.songs.splice(key,1);
+                        break;
+                    }
+                }
+            });
         },
         bindEvents() {
             this.view.$el.on('click', 'li', (e) => {
@@ -51,10 +59,9 @@
                 for (let i = 0; i < this.model.data.songs.length; i++) {
                     if (this.model.data.songs[i].id === $(e.currentTarget).attr('obj_id')) {
                         Object.assign(song, this.model.data.songs[i]);
-                        break;
                     }
                 }
-                window.eventHub.emit('edit', song);
+                window.eventHub.emit('edit', song);//点击歌曲列表触发编辑事件
             });
             setTimeout(() => {//页面加载完成后再加载歌曲列表
                 let query = new AV.Query('Song');
