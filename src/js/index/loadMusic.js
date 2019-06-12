@@ -35,7 +35,6 @@
                 }
                 $(this.el).find('ol').append(html)
             }
-            console.log(window.$())
         }
     }
     let model = {
