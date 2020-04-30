@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "leancloud-storage": "^3.13.2",
     "npm": "^6.9.0",
     "qiniu": "^7.2.1"
